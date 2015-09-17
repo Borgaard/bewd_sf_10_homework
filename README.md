@@ -46,7 +46,12 @@ Homework is given each Monday, and is always due the next Monday. Feedback on ea
 | 10         |   Use rails scaffolding to create a basic rails app for 'animals'.  It should have at least one model containing whatever you think is important to store.  At least include: name, animal_type, age, available, & image.  Remember to include every file from the app in your branch.     | [10_Rails_Intro](https://github.com/ga-students/bewd_sf_10/tree/master/10_Rails_Intro ) | Tuesday, September 8th | Saturday, September 12th |
 | 11         |  Follow: [http://guides.rubyonrails.org/getting_started.html](http://guides.rubyonrails.org/getting_started.html) and build the blog app.  Each article should have a title, date, body, author, private:boolean.  Each article should `has_many` comments.   Also, follow the steps from what we've learned from the last class, like including bootstrap into your rails app. | [11_Rails_Intro_Controller](https://github.com/ga-students/bewd_sf_10/tree/master/11_Rails_Intro_Controller) | Monday, September 14th | Wednesday, September 16th |
 | 11 (cont.) | Complete your blog app. Read the following: <br> http://guides.rubyonrails.org/action_controller_overview.html <br> http://guides.rubyonrails.org/association_basics.html <br> http://guides.rubyonrails.org/active_model_basics.html (highest priority is reading Active Model Basics) | [12_Rails_Intro_Controller](https://github.com/ga-students/bewd_sf_10/tree/master/12_Rails_Intro_Controller_Continued/code_along/bookazon_app) | Monday, September 14th | No feedback given on reading assignments. |
-| 13         | Complete [Rails for Zombies Redux](https://www.codeschool.com/courses/rails-for-zombies-redux) | [13_RailsIntro_Model_Associations_Validations](https://github.com/ga-students/bewd_sf_10/tree/master/13_Rails_Intro_Model_Associations_Validations) |  Monday, September 21st | Wednesday, September 23rd |
-| 14         |            | - | - | - |
+| 13         | Complete [Rails for Zombies Redux](https://www.codeschool.com/courses/rails-for-zombies-redux) | [13_Rails_Intro_Model_Associations_Validations](https://github.com/ga-students/bewd_sf_10/tree/master/13_Rails_Intro_Model_Associations_Validations) |  Monday, September 21st | Wednesday, September 23rd |
+| 14         | Read Bootstrap's documentation on the Bootstrap grid system | [14_Rails_Intro_Front_End](https://github.com/ga-students/bewd_sf_10/blob/master/14_Rails_Intro_Front_End/homework/music_app_homework.md) | Monday, September 21st | Wednesday, September 23rd |
+| 15         |            | - | - | - |
+| 16         |            | - | - | - |
+| 17         |            | - | - | - |
+| 18         |            | - | - | - |
+| 19         |            | - | - | - |
 | ...        |            | - | - | - |
 

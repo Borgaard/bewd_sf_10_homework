@@ -1,0 +1,179 @@
+
+
+Started GET "/" for ::1 at 2015-09-14 20:22:00 -0700
+
+ActiveRecord::PendingMigrationError - 
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+:
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/borgaard/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/borgaard/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/borgaard/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/f24e608bfd81b92e/variables" for ::1 at 2015-09-14 20:22:00 -0700
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateAnimals (20150902183143)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "animals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "species" varchar, "age" integer, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150902183143"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for ::1 at 2015-09-14 20:22:22 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AnimalsController#index as HTML
+  [1m[35mAnimal Load (0.5ms)[0m  SELECT "animals".* FROM "animals"
+  Rendered animals/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 1648ms (Views: 1635.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/animals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-14 20:22:25 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-14 20:22:25 -0700
+
+
+Started GET "/assets/scaffolds.self-03f6ced53783494e8d473a05a1b2a893b8177949d8836ef8be6a1162c6c767a6.css?body=1" for ::1 at 2015-09-14 20:22:25 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-14 20:22:25 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-14 20:22:25 -0700
+
+
+Started GET "/assets/animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-14 20:22:25 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-14 20:22:25 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-14 20:22:25 -0700
+
+
+Started GET "/animals/new" for ::1 at 2015-09-14 20:22:27 -0700
+Processing by AnimalsController#new as HTML
+  Rendered animals/_form.html.erb (23.3ms)
+  Rendered animals/new.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 67ms (Views: 62.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/animals" for ::1 at 2015-09-14 20:22:39 -0700
+Processing by AnimalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lCcZwsI7/3Ra5vDJU6Smg84kdrjtPLOQXei8agE2+nIu/sJhiWraTso6/ixt0CxFqEquyHzMUEwakBkxEv3Mng==", "animal"=>{"species"=>"doge", "age"=>"3", "name"=>"wowe"}, "commit"=>"Create Animal"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "animals" ("species", "age", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["species", "doge"], ["age", 3], ["name", "wowe"], ["created_at", "2015-09-15 03:22:39.579329"], ["updated_at", "2015-09-15 03:22:39.579329"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/animals/1
+Completed 302 Found in 10ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/animals/1" for ::1 at 2015-09-14 20:22:39 -0700
+Processing by AnimalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAnimal Load (0.5ms)[0m  SELECT  "animals".* FROM "animals" WHERE "animals"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered animals/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 44ms (Views: 34.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/animals/1/edit" for ::1 at 2015-09-14 20:22:45 -0700
+Processing by AnimalsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnimal Load (0.1ms)[0m  [1mSELECT  "animals".* FROM "animals" WHERE "animals"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered animals/_form.html.erb (2.1ms)
+  Rendered animals/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/animals/1" for ::1 at 2015-09-14 20:22:58 -0700
+Processing by AnimalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mt99rYVIAgnnq0KfvsjA1fyL4mYZdiRJU86lsMvboZEgBqYOzhknM3d3THqAvEoTmuU6FoiGx5UUtgDr2BCXfQ==", "animal"=>{"species"=>"such doge", "age"=>"3", "name"=>"wowe"}, "commit"=>"Update Animal", "id"=>"1"}
+  [1m[35mAnimal Load (0.1ms)[0m  SELECT  "animals".* FROM "animals" WHERE "animals"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "animals" SET "species" = ?, "updated_at" = ? WHERE "animals"."id" = ?  [["species", "such doge"], ["updated_at", "2015-09-15 03:22:58.647059"], ["id", 1]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/animals/1
+Completed 302 Found in 9ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/animals/1" for ::1 at 2015-09-14 20:22:58 -0700
+Processing by AnimalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAnimal Load (0.2ms)[0m  SELECT  "animals".* FROM "animals" WHERE "animals"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered animals/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/animals" for ::1 at 2015-09-14 20:23:00 -0700
+Processing by AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.1ms)[0m  [1mSELECT "animals".* FROM "animals"[0m
+  Rendered animals/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/animals/1" for ::1 at 2015-09-14 20:23:04 -0700
+Processing by AnimalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAnimal Load (0.1ms)[0m  SELECT  "animals".* FROM "animals" WHERE "animals"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered animals/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/animals/1" for ::1 at 2015-09-14 20:23:08 -0700
+Processing by AnimalsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4sgYmhI7sTOQJYhHLSshP+KOSPp4Ef9RVGU1XQMbNd9YEcM5WWqUCQD5hqITX6v5hOCQiunhHI0THZAGENADMw==", "id"=>"1"}
+  [1m[36mAnimal Load (0.1ms)[0m  [1mSELECT  "animals".* FROM "animals" WHERE "animals"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "animals" WHERE "animals"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/animals
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/animals" for ::1 at 2015-09-14 20:23:08 -0700
+Processing by AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.2ms)[0m  [1mSELECT "animals".* FROM "animals"[0m
+  Rendered animals/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 0.2ms)
